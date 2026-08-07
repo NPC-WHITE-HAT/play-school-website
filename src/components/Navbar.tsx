@@ -63,12 +63,14 @@ export default function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
-          <Link
-            to="/admissions"
+          <a
+            href="https://wa.me/918015812645"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-full bg-coral px-5 py-2.5 text-sm font-700 text-white shadow-coral transition-all duration-300 hover:-translate-y-0.5 hover:bg-coral-dark hover:shadow-lift sm:block"
           >
             Admission Open
-          </Link>
+          </a>
 
           <button
             onClick={() => setOpen((o) => !o)}

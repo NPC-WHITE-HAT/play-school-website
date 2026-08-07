@@ -15,7 +15,7 @@ export default function Footer() {
           <div>
             <BrandLogo className="h-12" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/70">
-              Where little minds bloom every day. A warm, premium preschool nurturing curious, confident and kind hearts since 2012.
+              Where little minds bloom every day. Nest & Nurture Play School and Child Care nurtures curious, confident and kind hearts in Chennai.
             </p>
             <div className="mt-6 flex gap-3">
               {[Camera, Share2, PlayCircle].map((Icon, i) => (
@@ -100,7 +100,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-cream/10 pt-6 text-xs text-cream/50 sm:flex-row">
-          <p>© {new Date().getFullYear()} Nest &amp; Nurture Preschool. Made with love for little learners.</p>
+          <p>© {new Date().getFullYear()} Nest &amp; Nurture Play School and Child Care. Made with love for little learners.</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-cream">Privacy Policy</a>
             <a href="#" className="hover:text-cream">Terms</a>

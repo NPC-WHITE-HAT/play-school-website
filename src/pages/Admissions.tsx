@@ -24,25 +24,48 @@ export default function Admissions() {
 
  const form = e.currentTarget;
  const fd = new FormData(form);
+ const parent_name = String(fd.get('parent_name') || '').trim();
+ const child_name = String(fd.get('child_name') || '').trim();
+ const child_age = String(fd.get('child_age') || '').trim();
+ const phone = String(fd.get('phone') || '').trim();
+ const email = String(fd.get('email') || '').trim();
+ const program = String(fd.get('program') || '').trim();
+ const preferred_visit_date = String(fd.get('preferred_visit_date') || '').trim();
+ const message = String(fd.get('message') || '').trim();
+
+ if (!parent_name || !child_name || !child_age || !phone || !program) {
+ setStatus('error');
+ setErrMsg('Please fill in all required fields before submitting.');
+ return;
+ }
+
  const payload: AdmissionEnquiry = {
- parent_name: String(fd.get('parent_name') || '').trim(),
- child_name: String(fd.get('child_name') || '').trim(),
- child_age: String(fd.get('child_age') || '').trim(),
- phone: String(fd.get('phone') || '').trim(),
- email: String(fd.get('email') || '').trim(),
- program: String(fd.get('program') || '').trim(),
- preferred_visit_date: String(fd.get('preferred_visit_date') || '').trim() || undefined,
- message: String(fd.get('message') || '').trim() || undefined,
+ parent_name,
+ child_name,
+ child_age,
+ phone,
+ email,
+ program,
+ preferred_visit_date: preferred_visit_date || undefined,
+ message: message || undefined,
  };
+
+ const whatsappMessage = encodeURIComponent(`Hello Nest & Nurture Play School and Child Care,\n\nI would like to enquire about admission.\n\nParent Name: ${parent_name}\nChild Name: ${child_name}\nChild Age: ${child_age}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\nProgram: ${program}\nPreferred Visit Date: ${preferred_visit_date || 'N/A'}\nMessage: ${message || 'N/A'}\n\nPlease contact me regarding the admission process.`);
+ const whatsappUrl = `https://wa.me/918015812645?text=${whatsappMessage}`;
 
  try {
  const { error } = await supabase.from('admission_enquiries').insert(payload);
  if (error) throw error;
+ } catch (err) {
+ // If backend or email functionality is not configured, continue with WhatsApp as the primary enquiry channel.
+ // eslint-disable-next-line no-console
+ console.warn('Admission enquiry save failed:', err);
+ }
+
  setStatus('success');
  form.reset();
- } catch (err) {
- setStatus('error');
- setErrMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again or call us.');
+ if (typeof window !== 'undefined') {
+ window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
  }
  };
 
@@ -160,11 +183,11 @@ export default function Admissions() {
 
  <div className="grid gap-5 sm:grid-cols-2">
  <Field icon={Baby} label="Child Age *"name="child_age"placeholder="e.g. 3 years 6 months"required />
- <Field icon={Phone} label="Phone *"name="phone"type="tel"placeholder="+91 98765 43210"required />
+ <Field icon={Phone} label="Phone *"name="phone"type="tel"placeholder="+91 80158 12645"required />
  </div>
 
  <div className="grid gap-5 sm:grid-cols-2">
- <Field icon={Mail} label="Email *"name="email"type="email"placeholder="you@example.com"required />
+ <Field icon={Mail} label="Email (Optional)"name="email"type="email"placeholder="you@example.com" />
  <div>
  <label className="mb-1.5 flex items-center gap-1.5 text-sm font-600 text-ink">
  <Sparkles className="h-4 w-4 text-coral"/> Program *

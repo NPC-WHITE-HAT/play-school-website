@@ -36,7 +36,9 @@ export default function AdmissionCTA() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <a
-                href={`tel:${CONTACT.phoneHref}`}
+                href="https://wa.me/918015812645"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/70 px-7 py-4 text-base font-700 text-white transition-all hover:-translate-y-1 hover:bg-white/15 sm:w-auto"
               >
                 <Phone className="h-5 w-5" /> Contact Us

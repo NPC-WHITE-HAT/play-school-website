@@ -1,4 +1,4 @@
-// Authentic Nest & Nurture Preschool photography, organized by the uploaded photo roles.
+// Authentic Nest & Nurture Play School and Child Care photography, organized by the uploaded photo roles.
 export const IMAGES = {
   heroMain: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg',
   heroTeacher: '/images/about/WhatsApp_Image_2026-08-07_at_12.50.26_PM.jpeg',
@@ -10,7 +10,7 @@ export const IMAGES = {
   aboutTrust: '/images/why-choose-us/WhatsApp_Image_2026-08-07_at_12.50.27_PM_(1).jpeg',
 
   gallery: [
-    { src: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg', alt: 'Nest & Nurture preschool community moment', span: 'tall' },
+    { src: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg', alt: 'Nest & Nurture Play School and Child Care community moment', span: 'tall' },
     { src: '/images/programs/WhatsApp_Image_2026-08-07_at_12.50.24_PM.jpeg', alt: 'Children learning in their preschool environment', span: 'normal' },
     { src: '/images/activities/WhatsApp_Image_2026-08-07_at_12.50.25_PM.jpeg', alt: 'Children taking part in a joyful school activity', span: 'tall' },
     { src: '/images/about/WhatsApp_Image_2026-08-07_at_12.50.26_PM.jpeg', alt: 'Teachers and children sharing a learning moment', span: 'normal' },
@@ -18,7 +18,7 @@ export const IMAGES = {
     { src: '/images/activities/WhatsApp_Image_2026-08-07_at_12.50.25_PM.jpeg', alt: 'Hands-on activity at Nest & Nurture', span: 'tall' },
     { src: '/images/programs/WhatsApp_Image_2026-08-07_at_12.50.24_PM.jpeg', alt: 'Preschool classroom experience', span: 'normal' },
     { src: '/images/about/WhatsApp_Image_2026-08-07_at_12.50.26_PM.jpeg', alt: 'Warm teacher-child interaction', span: 'tall' },
-    { src: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg', alt: 'A happy day at Nest & Nurture Preschool', span: 'normal' },
+    { src: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg', alt: 'A happy day at Nest & Nurture Play School and Child Care', span: 'normal' },
     { src: '/images/why-choose-us/WhatsApp_Image_2026-08-07_at_12.50.27_PM_(1).jpeg', alt: 'Bright and engaging preschool space', span: 'tall' },
     { src: '/images/activities/WhatsApp_Image_2026-08-07_at_12.50.25_PM.jpeg', alt: 'Creative activity with preschool children', span: 'normal' },
     { src: '/images/programs/WhatsApp_Image_2026-08-07_at_12.50.24_PM.jpeg', alt: 'Learning through play at preschool', span: 'normal' },
@@ -225,12 +225,12 @@ export const TRUST_BADGES = [
 ];
 
 export const CONTACT = {
-  phone: '+91 98765 43210',
-  phoneHref: '+919876543210',
-  whatsapp: '919876543210',
+  phone: '+91 80158 12645',
+  phoneHref: '+918015812645',
+  whatsapp: '918015812645',
   email: 'hello@nestandnurture.edu',
-  address: '14 Blossom Avenue, Greenfield Gardens, Bengaluru 560066',
-  mapEmbed: 'https://www.google.com/maps?q=Bengaluru&output=embed',
+  address: 'No. 3, Plot No. C-319, Chandrasekaran Road, Periyar Nagar, Chennai – 600082',
+  mapEmbed: 'https://www.google.com/maps?q=No.+3,+Plot+No.+C-319,+Chandrasekaran+Road,+Periyar+Nagar,+Chennai+600082&output=embed',
   hours: [
     { day: 'Monday – Friday', time: '8:30 AM – 4:30 PM' },
     { day: 'Saturday', time: '9:00 AM – 1:00 PM (Visits only)' },

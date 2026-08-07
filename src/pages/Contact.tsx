@@ -4,7 +4,6 @@ import { CONTACT } from '@/lib/data';
 import { supabase } from '@/lib/supabase';
 import Reveal from '@/components/Reveal';
 import FloatingShapes from '@/components/FloatingShapes';
-import SectionHeading from '@/components/SectionHeading';
 import AdmissionCTA from '@/components/home/AdmissionCTA';
 import {
  Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle2,
@@ -63,7 +62,17 @@ export default function Contact() {
 
  {/* Contact cards */}
  <section className="bg-cream px-5 py-10 lg:px-8">
- <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+ <div className="mx-auto max-w-6xl space-y-6">
+ <div className="rounded-[2rem] bg-white p-8 shadow-soft">
+ <h2 className="font-heading text-2xl font-800 text-ink">Nest & Nurture Play School and Child Care</h2>
+ <p className="mt-3 text-sm text-ink-soft">No. 3, Plot No. C-319, Chandrasekaran Road, Periyar Nagar, Chennai – 600082</p>
+ <div className="mt-6 grid gap-3 sm:grid-cols-3">
+ <a href={`tel:${CONTACT.phoneHref}`} className="rounded-3xl bg-cream p-4 text-sm font-600 text-ink transition-colors hover:bg-coral/10">Phone: {CONTACT.phone}</a>
+ <a href={`https://wa.me/${CONTACT.whatsapp}`} target="_blank" rel="noopener noreferrer" className="rounded-3xl bg-cream p-4 text-sm font-600 text-ink transition-colors hover:bg-coral/10">WhatsApp Enquiry</a>
+ <div className="rounded-3xl bg-cream p-4 text-sm text-ink">Working Hours: {CONTACT.hours.map((h) => `${h.day}: ${h.time}`).join(', ')}</div>
+ </div>
+ </div>
+ <div className="grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
  {[
  { icon: Phone, title: 'Call Us', value: CONTACT.phone, href: `tel:${CONTACT.phoneHref}`, sub: 'Mon–Sat, during school hours', color: 'from-coral/15 to-soft-yellow/30' },
  { icon: Mail, title: 'Email Us', value: CONTACT.email, href: `mailto:${CONTACT.email}`, sub: 'We reply within 24 hours', color: 'from-soft-green/40 to-sky-blue/40' },
@@ -86,6 +95,7 @@ export default function Contact() {
  </motion.a>
  </Reveal>
  ))}
+ </div>
  </div>
  </section>
 
@@ -134,7 +144,7 @@ export default function Contact() {
 
  <div className="grid gap-5 sm:grid-cols-2">
  <Input label="Your Name *"name="name"placeholder="e.g. Priya Sharma"required />
- <Input label="Phone *"name="phone"type="tel"placeholder="+91 98765 43210"required />
+ <Input label="Phone *"name="phone"type="tel"placeholder="+91 80158 12645"required />
  </div>
  <Input label="Email *"name="email"type="email"placeholder="you@example.com"required />
  <div>
