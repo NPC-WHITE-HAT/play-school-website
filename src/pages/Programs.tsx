@@ -29,7 +29,7 @@ export default function Programs() {
  A Thoughtful Path for Every Age
  </h1>
  <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink-soft md:text-lg">
- Four age-appropriate programs, each with its own carefully crafted curriculum, activities and learning outcomes — designed to help your child bloom at just the right pace.
+ Five age-appropriate programs, each with its own carefully crafted curriculum, activities and learning outcomes — designed to help your child bloom at just the right pace.
  </p>
  </Reveal>
  </div>
@@ -71,6 +71,15 @@ export default function Programs() {
  </h2>
  <p className="mt-1 font-heading text-base font-600 text-coral">{p.tagline}</p>
  <p className="mt-4 text-base leading-relaxed text-ink-soft">{p.description}</p>
+
+ {p.extraBadge ? (
+ <div className="mt-6">
+ <div className="inline-flex items-center rounded-full border border-coral/20 bg-coral/10 px-4 py-2 text-sm font-700 text-coral shadow-soft">
+ <span className="mr-2 grid h-2.5 w-2.5 rounded-full bg-coral" />
+ {p.extraBadge}
+ </div>
+ </div>
+ ) : null}
 
  <div className="mt-5 flex flex-wrap gap-2.5">
  <span className="inline-flex items-center gap-1.5 rounded-full bg-beige px-3.5 py-2 text-sm font-600 text-ink">
@@ -118,11 +127,29 @@ export default function Programs() {
  </div>
  </div>
 
+ {p.id !== 'daycare' && p.details ? (
+ <div className="mt-10 grid gap-5 lg:grid-cols-2">
+ {p.details.map((detail) => (
+ <div key={detail.title} className="rounded-[1.75rem] border border-ink/5 bg-white p-6 shadow-soft">
+ <h4 className="font-heading text-lg font-700 text-ink">{detail.title}</h4>
+ <ul className="mt-4 space-y-3 text-sm text-ink-soft">
+ {detail.items.map((item) => (
+ <li key={item} className="flex gap-3 leading-snug">
+ <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-coral" />
+ {item}
+ </li>
+ ))}
+ </ul>
+ </div>
+ ))}
+ </div>
+ ) : null}
+
  <Link
- to="/admissions"
+ to={`/admissions?program=${encodeURIComponent(p.name)}`}
  className="group mt-8 inline-flex items-center gap-2 rounded-full bg-coral px-6 py-3.5 text-sm font-700 text-white shadow-coral transition-all hover:gap-3 hover:-translate-y-0.5 hover:bg-coral-dark"
  >
- <CalendarCheck className="h-4 w-4"/> Enquire for {p.name}
+ <CalendarCheck className="h-4 w-4"/>{p.id === 'daycare' ? 'Enquire About Day Care' : `Enquire for ${p.name}`}
  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1"/>
  </Link>
  </Reveal>

@@ -44,6 +44,8 @@ export type Program = {
   curriculum: string[];
   activities: string[];
   outcomes: string[];
+  extraBadge?: string;
+  details?: { title: string; items: string[] }[];
 };
 
 export const PROGRAMS: Program[] = [
@@ -68,6 +70,69 @@ export const PROGRAMS: Program[] = [
       'Builds early motor coordination',
       'Responds to sounds, faces and colours',
       'Begins to interact with peers gently',
+    ],
+  },
+  {
+    id: 'daycare',
+    name: 'Day Care',
+    age: 'Preschool & school-going children',
+    timing: 'Extended care available until 8:00 PM',
+    tagline: 'A safe, caring place for your child beyond school hours',
+    description: 'Our Day Care program provides a safe, caring and engaging environment for children who need extended care beyond regular school hours. Children can spend their time comfortably with caring staff while enjoying age-appropriate activities, play, rest and a structured daily routine.',
+    color: 'yellow',
+    illustration: IMAGES.heroTeacher,
+    extraBadge: 'Extended Care • Until 8:00 PM',
+    details: [
+      {
+        title: 'Care & Safety',
+        items: [
+          'Safe and supervised environment',
+          'Caring and attentive staff',
+          'Secure premises',
+          'Comfortable environment for children',
+        ],
+      },
+      {
+        title: 'Daily Activities',
+        items: [
+          'Indoor and outdoor play',
+          'Story time and creative activities',
+          'Educational activities',
+          'Free play and recreation',
+          'Quiet/rest time',
+        ],
+      },
+      {
+        title: 'Child-Friendly Routine',
+        items: [
+          'Balanced daily routine',
+          'Personal attention',
+          'Age-appropriate activities',
+          'Comfortable rest periods',
+        ],
+      },
+      {
+        title: 'Learning & Development',
+        items: [
+          'Builds independence and confidence',
+          'Encourages social interaction',
+          'Develops creativity through play',
+          'Supports positive daily routines',
+        ],
+      },
+    ],
+    curriculum: [
+      'Routine-based comfort and care',
+      'Age-sensitive play and rest cycles',
+      'Soft-skill growth through guided interaction',
+      'Emotional well-being and social connection',
+    ],
+    activities: ['Quiet reading', 'Creative crafts', 'Relaxed group games', 'Outdoor play', 'Rest time'],
+    outcomes: [
+      'Builds independence and confidence',
+      'Encourages social interaction',
+      'Maintains calm, positive daily routines',
+      'Supports healthy after-school transition',
     ],
   },
   {
@@ -243,6 +308,7 @@ export const NAV_LINKS = [
   { label: 'About', to: '/about' },
   { label: 'Programs', to: '/programs' },
   { label: 'Gallery', to: '/gallery' },
+  { label: 'Events', to: '/events' },
   { label: 'Admissions', to: '/admissions' },
   { label: 'Contact', to: '/contact' },
 ];

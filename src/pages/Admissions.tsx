@@ -1,6 +1,6 @@
-import { useState, type FormEvent } from 'react';
+import { useState, useEffect, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { PROGRAMS, TRUST_BADGES, CONTACT } from '@/lib/data';
 import { supabase, type AdmissionEnquiry } from '@/lib/supabase';
 import Reveal from '@/components/Reveal';
@@ -16,6 +16,13 @@ type Status = 'idle' | 'submitting' | 'success' | 'error';
 export default function Admissions() {
  const [status, setStatus] = useState<Status>('idle');
  const [errMsg, setErrMsg] = useState('');
+ const [searchParams] = useSearchParams();
+ const [prefillProgram, setPrefillProgram] = useState('');
+
+ useEffect(() => {
+ const program = searchParams.get('program');
+ if (program) setPrefillProgram(program);
+ }, [searchParams]);
 
  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
  e.preventDefault();
@@ -195,10 +202,10 @@ export default function Admissions() {
  <select
  name="program"
  required
- defaultValue=""
+ defaultValue={prefillProgram || ''}
  className="w-full rounded-2xl border-2 border-ink/10 bg-beige px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-coral"
  >
- <option value=""disabled>Select a program</option>
+ <option value="" disabled>Select a program</option>
  {PROGRAMS.map((p) => (
  <option key={p.id} value={p.name}>{p.name} ({p.age})</option>
  ))}
