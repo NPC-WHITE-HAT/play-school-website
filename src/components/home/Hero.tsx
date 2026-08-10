@@ -140,23 +140,6 @@ export default function Hero() {
  </div>
  </div>
 
- {/* Floating stat card */}
- <motion.div
- animate={{ y: [0, -10, 0] }}
- transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
- className="absolute -bottom-5 -left-3 rounded-2xl glass p-4 shadow-lift sm:-left-6"
- >
- <div className="flex items-center gap-3">
- <div className="grid h-11 w-11 place-items-center rounded-xl bg-soft-green/70 text-green-deep">
- <Icon name="Smile"className="h-6 w-6"/>
- </div>
- <div>
- <p className="font-heading text-2xl font-800 leading-none text-ink">500+</p>
- <p className="text-xs font-600 text-ink-soft">Happy Families</p>
- </div>
- </div>
- </motion.div>
-
  <motion.div
  animate={{ y: [0, 10, 0] }}
  transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
