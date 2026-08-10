@@ -10,18 +10,11 @@ export const IMAGES = {
   aboutTrust: '/images/why-choose-us/WhatsApp_Image_2026-08-07_at_12.50.27_PM_(1).jpeg',
 
   gallery: [
-    { src: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg', alt: 'Nest & Nurture Play School and Child Care community moment', span: 'tall' },
-    { src: '/images/programs/WhatsApp_Image_2026-08-07_at_12.50.24_PM.jpeg', alt: 'Children learning in their preschool environment', span: 'normal' },
-    { src: '/images/activities/WhatsApp_Image_2026-08-07_at_12.50.25_PM.jpeg', alt: 'Children taking part in a joyful school activity', span: 'tall' },
-    { src: '/images/about/WhatsApp_Image_2026-08-07_at_12.50.26_PM.jpeg', alt: 'Teachers and children sharing a learning moment', span: 'normal' },
-    { src: '/images/why-choose-us/WhatsApp_Image_2026-08-07_at_12.50.27_PM_(1).jpeg', alt: 'A welcoming preschool setting for children', span: 'normal' },
-    { src: '/images/activities/WhatsApp_Image_2026-08-07_at_12.50.25_PM.jpeg', alt: 'Hands-on activity at Nest & Nurture', span: 'tall' },
-    { src: '/images/programs/WhatsApp_Image_2026-08-07_at_12.50.24_PM.jpeg', alt: 'Preschool classroom experience', span: 'normal' },
-    { src: '/images/about/WhatsApp_Image_2026-08-07_at_12.50.26_PM.jpeg', alt: 'Warm teacher-child interaction', span: 'tall' },
-    { src: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg', alt: 'A happy day at Nest & Nurture Play School and Child Care', span: 'normal' },
-    { src: '/images/why-choose-us/WhatsApp_Image_2026-08-07_at_12.50.27_PM_(1).jpeg', alt: 'Bright and engaging preschool space', span: 'tall' },
-    { src: '/images/activities/WhatsApp_Image_2026-08-07_at_12.50.25_PM.jpeg', alt: 'Creative activity with preschool children', span: 'normal' },
-    { src: '/images/programs/WhatsApp_Image_2026-08-07_at_12.50.24_PM.jpeg', alt: 'Learning through play at preschool', span: 'normal' },
+    { src: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg', alt: 'Children engaged in a bright preschool activity', span: 'tall' },
+    { src: '/images/programs/WhatsApp_Image_2026-08-07_at_12.50.24_PM.jpeg', alt: 'Young learners working together in the classroom', span: 'normal' },
+    { src: '/images/activities/WhatsApp_Image_2026-08-07_at_12.50.25_PM.jpeg', alt: 'Kids enjoying a hands-on group activity', span: 'normal' },
+    { src: '/images/about/WhatsApp_Image_2026-08-07_at_12.50.26_PM.jpeg', alt: 'Teacher supporting children with creative learning', span: 'normal' },
+    { src: '/images/why-choose-us/WhatsApp_Image_2026-08-07_at_12.50.27_PM_(1).jpeg', alt: 'A welcoming preschool classroom with playful decor', span: 'tall' },
   ],
 
   activities: {
@@ -143,7 +136,7 @@ export const PROGRAMS: Program[] = [
     tagline: 'Curiosity takes root',
     description: 'Where curiosity blooms through guided play, songs and stories — children begin to express themselves, make friends and discover the joy of learning.',
     color: 'green',
-    illustration: IMAGES.heroRoleplay,
+    illustration: IMAGES.aboutTrust,
     curriculum: [
       'Phonics & early language exposure',
       'Numbers through play-based counting',
@@ -166,7 +159,7 @@ export const PROGRAMS: Program[] = [
     tagline: 'Growing confident and capable',
     description: 'A structured-yet-playful year that builds strong foundations in literacy, numeracy and social-emotional skills — preparing children to think, question and create.',
     color: 'blue',
-    illustration: IMAGES.gallery[7].src,
+    illustration: IMAGES.heroRoleplay,
     curriculum: [
       'Reading readiness & sight words',
       'Number concepts 1–50 & patterns',
@@ -189,7 +182,7 @@ export const PROGRAMS: Program[] = [
     tagline: 'Ready to soar into big school',
     description: 'The final preschool year — a rich, immersive curriculum that makes children school-ready with strong academics, confident communication and joyful independence.',
     color: 'yellow',
-    illustration: IMAGES.gallery[10].src,
+    illustration: IMAGES.heroMain,
     curriculum: [
       'Fluent reading & sentence writing',
       'Addition, subtraction & number bonds',
