@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { Heart, Award, Users, BookOpen } from 'lucide-react';
 
 const STATS = [
- { icon: Users, value: '500+', label: 'Happy Families' },
+ { icon: Users, value: '100+', label: 'Happy Families' },
  { icon: BookOpen, value: '4', label: 'Age Programs' },
  { icon: Award, value: '13+', label: 'Years of Care' },
  { icon: Heart, value: '8:1', label: 'Student-Teacher Ratio' },
