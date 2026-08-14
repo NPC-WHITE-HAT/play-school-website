@@ -20,7 +20,11 @@ export default function FloatingButtons() {
       </motion.a>
 
       <motion.a
-        href={`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent('Hello Nest & Nurture Play School and Child Care,%0A%0AI would like to know more about admissions and programs.%0A%0AThank you.')}`}
+        href={
+          `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(
+            'Hello Nest & Nurture Play School and Child Care,\n\nI would like to know more about admissions and programs.\n\nThank you.'
+          )}`
+        }
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
