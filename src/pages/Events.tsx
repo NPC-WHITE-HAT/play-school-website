@@ -4,7 +4,7 @@ import FloatingShapes from '@/components/FloatingShapes';
 import EventCard from '@/components/EventCard';
 import { IMAGES } from '@/lib/data';
 
-const eventItems = IMAGES.gallery.slice(0, 6).map((g) => ({ src: g.src, alt: g.alt }));
+const eventItems = IMAGES.gallery.map((g) => ({ src: g.src, alt: g.alt }));
 
 export default function Events() {
   useEffect(() => {

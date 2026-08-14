@@ -17,6 +17,8 @@ export const IMAGES = {
     { src: '/images/gallery/gallery-5.jpg', alt: 'Gallery photo 5', span: 'tall' },
     { src: '/images/gallery/gallery-6.jpg', alt: 'Gallery photo 6', span: 'normal' },
     { src: '/images/gallery/gallery-7.jpg', alt: 'Gallery photo 7', span: 'normal' },
+    { src: '/images/gallery/gallery-8.jpg', alt: 'Gallery photo 8', span: 'normal' },
+    { src: '/images/gallery/gallery-9.jpg', alt: 'Gallery photo 9', span: 'normal' },
   ],
 
   activities: {
