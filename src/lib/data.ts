@@ -286,7 +286,7 @@ export const CONTACT = {
   phone: '+91 80158 12645',
   phoneHref: '+918015812645',
   whatsapp: '918015812645',
-  email: 'hello@nestandnurture.edu',
+  email: 'srikavitha1792@gmail.com',
   address: 'No. 3, Plot No. C-319, Chandrasekaran Road, Periyar Nagar, Chennai – 600082',
   mapEmbed: 'https://www.google.com/maps?q=No.+3,+Plot+No.+C-319,+Chandrasekaran+Road,+Periyar+Nagar,+Chennai+600082&output=embed',
   hours: [
