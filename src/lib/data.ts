@@ -10,11 +10,13 @@ export const IMAGES = {
   aboutTrust: '/images/why-choose-us/WhatsApp_Image_2026-08-07_at_12.50.27_PM_(1).jpeg',
 
   gallery: [
-    { src: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg', alt: 'Children engaged in a bright preschool activity', span: 'tall' },
-    { src: '/images/programs/WhatsApp_Image_2026-08-07_at_12.50.24_PM.jpeg', alt: 'Young learners working together in the classroom', span: 'normal' },
-    { src: '/images/activities/WhatsApp_Image_2026-08-07_at_12.50.25_PM.jpeg', alt: 'Kids enjoying a hands-on group activity', span: 'normal' },
-    { src: '/images/about/WhatsApp_Image_2026-08-07_at_12.50.26_PM.jpeg', alt: 'Teacher supporting children with creative learning', span: 'normal' },
-    { src: '/images/why-choose-us/WhatsApp_Image_2026-08-07_at_12.50.27_PM_(1).jpeg', alt: 'A welcoming preschool classroom with playful decor', span: 'tall' },
+    { src: '/images/gallery/gallery-1.jpg', alt: 'Gallery photo 1', span: 'tall' },
+    { src: '/images/gallery/gallery-2.jpg', alt: 'Gallery photo 2', span: 'normal' },
+    { src: '/images/gallery/gallery-3.jpg', alt: 'Gallery photo 3', span: 'normal' },
+    { src: '/images/gallery/gallery-4.jpg', alt: 'Gallery photo 4', span: 'normal' },
+    { src: '/images/gallery/gallery-5.jpg', alt: 'Gallery photo 5', span: 'tall' },
+    { src: '/images/gallery/gallery-6.jpg', alt: 'Gallery photo 6', span: 'normal' },
+    { src: '/images/gallery/gallery-7.jpg', alt: 'Gallery photo 7', span: 'normal' },
   ],
 
   activities: {

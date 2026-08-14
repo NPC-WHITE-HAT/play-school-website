@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ZoomIn } from 'lucide-react';
 
-const preview = IMAGES.gallery.slice(0, 5).map((g) => ({ src: g.src, alt: g.alt }));
+const preview = IMAGES.gallery.slice(0, 6).map((g) => ({ src: g.src, alt: g.alt }));
 
 export default function GalleryPreview() {
  const [lb, setLb] = useState<number | null>(null);
