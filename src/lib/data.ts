@@ -27,6 +27,14 @@ export const IMAGES = {
     dance: '/images/hero/WhatsApp_Image_2026-08-07_at_12.50.23_PM.jpeg',
     music: '/images/programs/WhatsApp_Image_2026-08-07_at_12.50.24_PM.jpeg',
   },
+
+  programs: {
+    playgroup: '/images/programs/playgroup.jpg',
+    daycare: '/images/programs/daycare.jpg',
+    nursery: '/images/programs/nursery.jpg',
+    lkg: '/images/programs/lkg.jpg',
+    ukg: '/images/programs/ukg.jpg',
+  },
 };
 
 export type Program = {
@@ -54,7 +62,7 @@ export const PROGRAMS: Program[] = [
     tagline: 'First steps into a world of wonder',
     description: 'A gentle, sensory-rich introduction to school where our youngest learners explore freely in a safe, loving environment designed just for them.',
     color: 'coral',
-    illustration: IMAGES.heroPlay,
+    illustration: IMAGES.programs.playgroup,
     curriculum: [
       'Sensory play & tactile exploration',
       'Rhymes, lullabies & music time',
@@ -77,7 +85,7 @@ export const PROGRAMS: Program[] = [
     tagline: 'A safe, caring place for your child beyond school hours',
     description: 'Our Day Care program provides a safe, caring and engaging environment for children who need extended care beyond regular school hours. Children can spend their time comfortably with caring staff while enjoying age-appropriate activities, play, rest and a structured daily routine.',
     color: 'yellow',
-    illustration: IMAGES.heroTeacher,
+    illustration: IMAGES.programs.daycare,
     extraBadge: 'Extended Care • Until 8:00 PM',
     details: [
       {
@@ -140,7 +148,7 @@ export const PROGRAMS: Program[] = [
     tagline: 'Curiosity takes root',
     description: 'Where curiosity blooms through guided play, songs and stories — children begin to express themselves, make friends and discover the joy of learning.',
     color: 'green',
-    illustration: IMAGES.aboutTrust,
+    illustration: IMAGES.programs.nursery,
     curriculum: [
       'Phonics & early language exposure',
       'Numbers through play-based counting',
@@ -163,7 +171,7 @@ export const PROGRAMS: Program[] = [
     tagline: 'Growing confident and capable',
     description: 'A structured-yet-playful year that builds strong foundations in literacy, numeracy and social-emotional skills — preparing children to think, question and create.',
     color: 'blue',
-    illustration: IMAGES.heroRoleplay,
+    illustration: IMAGES.programs.lkg,
     curriculum: [
       'Reading readiness & sight words',
       'Number concepts 1–50 & patterns',
@@ -186,7 +194,7 @@ export const PROGRAMS: Program[] = [
     tagline: 'Ready to soar into big school',
     description: 'The final preschool year — a rich, immersive curriculum that makes children school-ready with strong academics, confident communication and joyful independence.',
     color: 'yellow',
-    illustration: IMAGES.heroMain,
+    illustration: IMAGES.programs.ukg,
     curriculum: [
       'Fluent reading & sentence writing',
       'Addition, subtraction & number bonds',
