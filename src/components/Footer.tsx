@@ -1,7 +1,17 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Send, ArrowRight, Share2, Camera, PlayCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, ArrowRight } from 'lucide-react';
 import { NAV_LINKS, CONTACT } from '@/lib/data';
 import BrandLogo from '@/components/BrandLogo';
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   return (
@@ -18,11 +28,17 @@ export default function Footer() {
               Where little minds bloom every day. Nest & Nurture Play School and Child Care nurtures curious, confident and kind hearts in Chennai.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Camera, Share2, PlayCircle].map((Icon, i) => (
+              {[
+                { href: 'https://www.instagram.com/nestandnurture.playschool/', label: 'Instagram', Icon: InstagramIcon, target: '_blank', rel: 'noopener noreferrer' },
+                { href: 'https://maps.app.goo.gl/cTziYQkeGuGRQxv2A', label: 'Google Maps', Icon: MapPin, target: '_blank', rel: 'noopener noreferrer' },
+                { href: 'mailto:srikavitha1792@gmail.com', label: 'Email', Icon: Mail },
+              ].map(({ href, label, Icon, target, rel }) => (
                 <a
-                  key={i}
-                  href="#"
-                  aria-label="Social link"
+                  key={label}
+                  href={href}
+                  target={target}
+                  rel={rel}
+                  aria-label={label}
                   className="grid h-10 w-10 place-items-center rounded-full bg-cream/10 text-cream/80 transition-all hover:-translate-y-1 hover:bg-coral hover:text-white"
                 >
                   <Icon className="h-4.5 w-4.5" />
