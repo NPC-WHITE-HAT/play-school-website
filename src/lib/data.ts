@@ -34,6 +34,7 @@ export const IMAGES = {
     nursery: '/images/programs/nursery.jpg',
     lkg: '/images/programs/lkg.jpg',
     ukg: '/images/programs/ukg.jpg',
+    afterSchoolPrograms: '/images/programs/after-school-programs.jpg',
   },
 };
 
@@ -51,6 +52,7 @@ export type Program = {
   outcomes: string[];
   extraBadge?: string;
   details?: { title: string; items: string[] }[];
+  hideImage?: boolean;
 };
 
 export const PROGRAMS: Program[] = [
@@ -207,6 +209,67 @@ export const PROGRAMS: Program[] = [
       'Solves basic addition and subtraction',
       'Speaks confidently in front of groups',
       'Transition smoothly to primary school',
+    ],
+  },
+  {
+    id: 'after-school-programs',
+    name: 'After School Programs',
+    age: '3 Years & Above',
+    timing: '4:00 PM – 8:00 PM',
+    tagline: 'Enriching activities and skill-building after school hours',
+    description: 'A dynamic after-school experience with diverse activities ranging from cultural arts to academics, sports and wellness — designed to engage young minds and develop well-rounded skills in a fun, supportive environment.',
+    color: 'green',
+    illustration: IMAGES.programs.afterSchoolPrograms,
+    hideImage: false,
+    curriculum: [
+      'Multi-disciplinary skill development',
+      'Cultural arts and creative expression',
+      'Academic enrichment and learning',
+      'Physical wellness and sports',
+    ],
+    activities: [
+      'Hindi Class',
+      'Tanjore Painting',
+      'Phonics',
+      'Chess Class',
+      'Handwriting',
+      'Carnatic Music',
+      'Drawing, Sketching & Painting',
+      'Western Dance',
+      'Art & Craft Session',
+      'Kids Zumba',
+      'Yoga & Mindfulness',
+    ],
+    outcomes: [
+      'Discovers and develops diverse talents and interests',
+      'Builds confidence through skill mastery',
+      'Expands cultural and creative horizons',
+      'Maintains physical health and emotional well-being',
+    ],
+    details: [
+      {
+        title: 'Schedule',
+        items: [
+          'Monday – Saturday',
+          '4:00 PM – 8:00 PM',
+        ],
+      },
+      {
+        title: 'Classes & Activities',
+        items: [
+          'Hindi Class',
+          'Tanjore Painting',
+          'Phonics',
+          'Chess Class',
+          'Handwriting',
+          'Carnatic Music',
+          'Drawing, Sketching & Painting',
+          'Western Dance',
+          'Art & Craft Session',
+          'Kids Zumba',
+          'Yoga & Mindfulness',
+        ],
+      },
     ],
   },
 ];

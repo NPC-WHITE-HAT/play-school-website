@@ -29,7 +29,7 @@ export default function Programs() {
  A Thoughtful Path for Every Age
  </h1>
  <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink-soft md:text-lg">
- Five age-appropriate programs, each with its own carefully crafted curriculum, activities and learning outcomes — designed to help your child bloom at just the right pace.
+ Six age-appropriate programs, each with its own carefully crafted curriculum, activities and learning outcomes — designed to help your child bloom at just the right pace.
  </p>
  </Reveal>
  </div>
@@ -46,8 +46,9 @@ export default function Programs() {
  className={`relative scroll-mt-24 py-20 md:py-24 ${i % 2 === 0 ? 'bg-beige' : 'bg-cream'}`}
  >
  <div className="mx-auto max-w-7xl px-5 lg:px-8">
- <div className={`grid items-center gap-10 lg:grid-cols-2 ${reversed ? 'lg:flex-row-reverse' : ''}`}>
+ <div className={`grid items-center gap-10 ${p.hideImage ? 'lg:grid-cols-1' : 'lg:grid-cols-2'} ${reversed ? 'lg:flex-row-reverse' : ''}`}>
  {/* Image */}
+ {!p.hideImage && (
  <Reveal className={reversed ? 'lg:order-2' : ''}>
  <div className="relative">
  <div className={`absolute -inset-3 rounded-[2.2rem] bg-gradient-to-br ${colorBar[p.color]} opacity-20 blur-2xl`} />
@@ -60,6 +61,7 @@ export default function Programs() {
  </div>
  </div>
  </Reveal>
+ )}
 
  {/* Content */}
  <Reveal delay={0.1} className={reversed ? 'lg:order-1' : ''}>
