@@ -292,6 +292,10 @@ export const TRUST_BADGES = [
   { icon: 'GraduationCap', label: 'Experienced Teachers' },
   { icon: 'Puzzle', label: 'Play-Based Learning' },
   { icon: 'Cctv', label: 'CCTV Monitoring' },
+  { icon: 'Dices', label: 'Indoor Play Area' },
+  { icon: 'Waves', label: 'Splash Pool' },
+  { icon: 'School', label: 'Montessori Trained Teachers' },
+  { icon: 'Snowflake', label: 'Air-Conditioned Classrooms' },
 ];
 
 export const CONTACT = {
