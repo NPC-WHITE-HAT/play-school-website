@@ -306,7 +306,7 @@ export default function Admissions() {
  </a>
  <div className="flex items-center gap-3 font-600 text-ink">
  <span className="grid h-9 w-9 place-items-center rounded-xl bg-coral/12 text-coral"><Clock className="h-4.5 w-4.5"/></span>
- Mon–Fri: 8:30 AM – 4:30 PM
+ Mon–Sat: 8:00 AM – 8:30 PM
  </div>
  </div>
  </div>

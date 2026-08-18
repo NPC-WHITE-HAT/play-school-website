@@ -31,7 +31,7 @@ export default function Footer() {
               {[
                 { href: 'https://www.instagram.com/nestandnurture.playschool/', label: 'Instagram', Icon: InstagramIcon, target: '_blank', rel: 'noopener noreferrer' },
                 { href: 'https://maps.app.goo.gl/cTziYQkeGuGRQxv2A', label: 'Google Maps', Icon: MapPin, target: '_blank', rel: 'noopener noreferrer' },
-                { href: 'mailto:srikavitha1792@gmail.com', label: 'Email', Icon: Mail },
+                { href: 'mailto:nestandnurture.chennai@gmail.com', label: 'Email', Icon: Mail },
               ].map(({ href, label, Icon, target, rel }) => (
                 <a
                   key={label}
@@ -80,7 +80,7 @@ export default function Footer() {
             </ul>
             <div className="mt-5 flex items-start gap-3 rounded-2xl bg-cream/5 p-3 text-sm text-cream/70">
               <Clock className="h-4.5 w-4.5 shrink-0 text-coral" />
-              <span>Mon – Fri: 8:30 AM – 4:30 PM</span>
+              <span>Mon – Sat: 8:00 AM – 8:30 PM</span>
             </div>
           </div>
 
