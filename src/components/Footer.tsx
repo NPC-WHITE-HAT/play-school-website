@@ -117,6 +117,9 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-cream/10 pt-6 text-xs text-cream/50 sm:flex-row">
           <p>© {new Date().getFullYear()} Nest &amp; Nurture Play School and Child Care. Made with love for little learners.</p>
+          <p className="text-sm text-gray-400 mt-4">
+  Designed & Developed by <span className="font-semibold">QELANTO Technologies</span>
+</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-cream">Privacy Policy</a>
             <a href="#" className="hover:text-cream">Terms</a>
